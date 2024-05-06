@@ -1,0 +1,383 @@
+body {
+    background-color: rgb(251, 255, 245);
+    margin: 0px;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    margin-top: 9vw;
+    margin-bottom: 3vw;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Navbar Styles */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2em;
+    border-bottom: 2px solid black;
+    padding: 1% 10%;
+    position: fixed;
+    width: 80%;
+    background-color: rgb(251, 255, 245);
+    border-radius: 10px;
+    overflow: hidden;
+    top: 0;
+}
+
+.navbarImage {
+    height: 5vw;
+}
+
+.navLinkContainer a {
+    padding: 10px;
+    background-color: rgb(172, 224, 104);
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    margin: 0px 10px;
+}
+
+.navLinkConatiner a:hover {
+    background-color: rgb(9, 9, 9);
+}
+
+/* Hero box */
+
+.heroBox {
+    display: flex;
+    background-image: url(images/heroImage.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 30vw;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.heroText {
+    background-color: rgba(0, 0, 0, 0.649);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 0;
+    margin: auto;
+    color: white;
+    width: 80%;
+}
+
+.heroBox h1 {
+    text-align: center;
+    font-size: 4em;
+    margin: 20px 0 10px 0;
+}
+
+.heroText p {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0 10px 0;
+}
+
+.heroText a {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+/* About box */
+
+.aboutBox {
+    background-color: rgb(172, 224, 104);
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.aboutBox img {
+    flex: 1;
+    max-height: 25vw;
+    border-radius: 10px;
+    margin: 5px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.aboutText {
+    margin: 5px;
+    height: 100%;
+    flex: 1;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 0;
+    margin: auto;
+    color: black;
+}
+
+.aboutBox h3 {
+    text-align: center;
+    font-size: 3em;
+    margin: 20px 0 10px 0;
+}
+
+.aboutText p {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0 10px 0;
+}
+
+.aboutText a {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid black;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Services box */
+
+.servicesBox {
+    background-color: rgb(172, 224, 104);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20px;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.servicesBox h2 {
+    text-align: center;
+    font-size: 3em;
+    margin: 20px 0 10px 0;
+}
+
+.servicesHeaderContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width:100%;
+}
+
+.serviceHeader {
+    min-height: 10vw;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    flex: 1;
+    margin: 10px;
+}
+
+.serviceHeader h3 {
+    text-align: center;
+    font-size: 3em;
+    margin: 0 0 10px 0;
+}
+
+.serviceSvgContainer {
+    margin: 20px 20% 0 20%;
+    height: 0;
+    padding-bottom: 65%;
+}
+
+.servicesTable {
+    border-collapse: collapse;
+    font-size: 2em;
+    width: 100%;
+}
+
+.servicesTable th {
+    font-weight: bold;
+    border: 1px dotted black;
+    padding: 5px;
+}
+
+.servicesTable td {
+    border: 1px dotted black;
+    padding: 5px;
+}
+
+.serviceDisclaimer {
+    text-align: left;
+}
+
+/* TESTIMONIALS */
+
+.testimonialsBox h2 {
+    font-size: 3em;
+    text-align: center;
+}
+
+.testimonialBoxLeft {
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.testimonialBoxRight {
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 30px 0 30px auto;
+}
+
+.testimonialText {
+    font-size: 1.5em;
+}
+
+.testimonialAuthor {
+    font-size: 1em;
+}
+
+/* CONTACT FORM */
+
+.contactFormBox {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.contactFormText {
+    text-align: center;
+}
+
+.contactFormText h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.contactFormText p {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.contactFormText p a {
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.contactFormBox form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contactFormBox form input {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 2em;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contactFormBox form textarea {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 2em;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 5px;
+    margin-top: 10px;
+    background-color: rgb(172, 224, 104);
+}
+
+.footerList {
+    list-style-type: disc;
+}
+
+.footerLI {
+    margin: 0 0 5px 0;
+}
+
+.footerNavLinks {
+    width: 49%;
+}
+
+.footerNavTitle {
+    list-style-type: none;
+    font-size: 2em;
+    margin: 0 0 5px 0;
+}
+
+.footerLink {
+    font-size: 1.5em;
+    color: black;
+    display: inline;
+    text-decoration: none;
+    padding: 0px 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.footerContactInfo {
+    font-size: 1.5em;
+    color: black;
+    display: inline;
+    text-decoration: none;
+    padding: 0px 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.footerLink:hover {
+    animation-name: footerHoverAnim;
+    animation-duration: 0.5s;
+    border-bottom: 2px solid black;
+}
+
+.footerContact {
+    width: 50%;
+}
+
+.footerFlexContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes footerHoverAnim {
+    0% {
+        border-bottom: 2px solid transparent;
+    }
+
+    100% {
+        border-bottom: 2px solid black;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .footerContact {
+        width: 100%;
+    }
+    .footerNavLinks {
+        width: 100%;
+    }
+    .footerFlexContainer {
+        flex-wrap: wrap;
+    }
+}
