@@ -14,6 +14,14 @@ main {
     margin: 0 auto;
 }
 
+.bg-green {
+    background-color: rgb(172, 224, 104);
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
 /* Navbar Styles */
 
 nav {
@@ -71,14 +79,35 @@ nav {
     background-image: url(../images/heroImage.jpg);
     background-size: cover;
     background-position: center;
-    min-height: 70vh;
+    min-height: 60vh;
 }
 
-.heroFlexContainer {
+.aboutHeroBox {
+    background-image: url(../images/aboutHero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+}
+
+.serviceHeroBox {
+    background-image: url(../images/servicesHero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+}
+
+.rightHeroFlexContainer {
     display: flex;
     justify-content: right;
     align-items: center;
-    min-height: 69vh;
+    height: 60vh;
+}
+
+.centerHeroFlexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
 }
 
 .heroText {
@@ -94,7 +123,24 @@ nav {
     flex-wrap: nowrap;
 }
 
+.wideHeroText {
+    width: 75%;
+    padding: 40px;
+}
+
 .heroBox h1 {
+    text-align: center;
+    font-size: 4em;
+    margin: 20px 0 10px 0;
+}
+
+.aboutHeroBox h1 {
+    text-align: center;
+    font-size: 4em;
+    margin: 20px 0 10px 0;
+}
+
+.serviceHeroBox h1 {
     text-align: center;
     font-size: 4em;
     margin: 20px 0 10px 0;
@@ -204,7 +250,7 @@ nav {
 .servicesBox h2 {
     text-align: center;
     font-size: 3em;
-    margin: 20px 0 10px 0;
+    margin: 20px 0 20px 0;
 }
 
 .servicesHeaderContainer {
@@ -215,18 +261,22 @@ nav {
 }
 
 .serviceHeader {
+    display: block;
     background-color: rgb(172, 224, 104);
     min-height: 10vw;
     border-radius: 10px;
     border: 2px solid black;
     flex: 1;
     margin: 10px;
+    cursor: default;
+    text-decoration: none;
 }
 
 .serviceHeader h3 {
     text-align: center;
     font-size: 3em;
     margin: 0 0 10px 0;
+    color: black;
 }
 
 .serviceSvgContainer {
@@ -240,6 +290,14 @@ nav {
     font-size: 2em;
     width: 100%;
 }
+
+.servicesTable tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .servicesTable tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
 
 .servicesTable th {
     font-weight: bold;
@@ -313,9 +371,14 @@ nav {
 }
 
 .contactFormText p a {
-    padding: 5px;
-    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid rgb(172, 224, 104);
+    background-color: rgb(172, 224, 104);
     color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 20px;
 }
 
 .contactFormBox form {
