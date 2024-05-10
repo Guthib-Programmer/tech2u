@@ -10,9 +10,20 @@
 
 <body>
     <nav>
-        <a href="#"><img src="images/logo.png" alt="Tech2U Logo" class="navbarImage"></a>
-        <div class="navLinkContainer">
-            <a href="index">Home</a>
+        <div class="largeNavContainer">
+            <a href="#"><img src="images/logo.png" alt="Tech2U Logo" class="navbarImage"></a>
+            <div class="navLinkContainer">
+                <a href="index" id="activeLink">Home</a>
+                <a href="about">About</a>
+                <a href="services">My Services</a>
+                <a href="contact">Contact</a>
+            </div>
+        </div>
+        <div class="smallNavContainer">
+            <span onclick="toggleNavbar()"><img src="images/logo.png" alt="Tech2U Logo" class="navbarImage"></span>
+        </div>
+        <div class="smallNavLinksHide" id="smallNavLinks">
+            <a href="index" id="activeLink">Home</a>
             <a href="about">About</a>
             <a href="services">My Services</a>
             <a href="contact">Contact</a>
@@ -23,7 +34,8 @@
             <div class="rightHeroFlexContainer container">
                 <div class="heroText">
                     <h1>Toyota Specialist in Queenstown</h1>
-                    <p>Hi, I'm Malcom and I am a qualified toyota technician based in queenstown and will do whatever it
+                    <p>Hi, I'm Malcom and I am a qualified toyota technician based in queenstown and will do
+                        whatever it
                         takes to help maintain your vehicle.</p>
                     <a href="services">My Services &rarr;</a>
                 </div>
@@ -166,9 +178,9 @@
                     <div class="testimonialText">When you book in your vehicle for servicing, who will it be that works
                         on
                         your car? With Malcom and Tech2U you have the peace of mind that whatever the job is you have an
-                        absolute expert doing your work. Add to this benefit, the convenice, and then all the others,
+                        absolute expert doing your work. Add to this benefit, the convenience, and then all the others,
                         really
-                        it is a "no brainer". Call Malcom!</div>
+                        it is a no brainer. Call Malcom!</div>
                     <div class="testimonialAuthor">
                         - John Bousie
                     </div>
@@ -220,6 +232,7 @@
             <div class="copyright">&copy; Tech2U 2024, All Rights Reserved</div>
         </div>
     </footer>
+    <script src="javascript/javascript.js"></script>
 </body>
 
 </html>

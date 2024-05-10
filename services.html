@@ -10,11 +10,22 @@
 
 <body>
     <nav>
-        <a href="#"><img src="images/logo.png" alt="Tech2U Logo" class="navbarImage"></a>
-        <div class="navLinkContainer">
+        <div class="largeNavContainer">
+            <a href="#"><img src="images/logo.png" alt="Tech2U Logo" class="navbarImage"></a>
+            <div class="navLinkContainer">
+                <a href="index">Home</a>
+                <a href="about">About</a>
+                <a href="services" id="activeLink">My Services</a>
+                <a href="contact">Contact</a>
+            </div>
+        </div>
+        <div class="smallNavContainer">
+            <span onclick="toggleNavbar()"><img src="images/logo.png" alt="Tech2U Logo" class="navbarImage"></span>
+        </div>
+        <div class="smallNavLinksHide" id="smallNavLinks">
             <a href="index">Home</a>
             <a href="about">About</a>
-            <a href="services">My Services</a>
+            <a href="services" id="activeLink">My Services</a>
             <a href="contact">Contact</a>
         </div>
     </nav>
@@ -131,6 +142,7 @@
             <div class="copyright">&copy; Tech2U 2024, All Rights Reserved</div>
         </div>
     </footer>
+    <script src="javascript/javascript.js"></script>
 </body>
 
 </html>

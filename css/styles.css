@@ -1,5 +1,10 @@
+:root {
+    --primary: rgb(166, 207, 60);
+    --secondary: rgb(251, 255, 245);
+}
+
 body {
-    background-color: rgb(251, 255, 245);
+    background-color: var(--secondary);
     margin: 0px;
 }
 
@@ -15,7 +20,7 @@ main {
 }
 
 .bg-green {
-    background-color: rgb(172, 224, 104);
+    background-color: var(--primary);
 }
 
 .mt-0 {
@@ -25,6 +30,11 @@ main {
 /* Navbar Styles */
 
 nav {
+    position: fixed;
+    z-index: 2;
+}
+
+.largeNavContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,21 +43,73 @@ nav {
     padding: 1% 10%;
     position: fixed;
     width: 80%;
-    background-color: rgb(251, 255, 245);
+    background-color: var(--secondary);
     border-radius: 10px;
     overflow: hidden;
     top: 0;
     z-index: 2;
 }
 
+.smallNavContainer {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2em;
+    border-bottom: 2px solid black;
+    padding: 1% 10%;
+    position: fixed;
+    width: 80%;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    overflow: hidden;
+    top: 0;
+    z-index: 2;
+}
+
+.smallNavLinksHide {
+    display: none;
+}
+
+.smallNavLinksShow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 6vh;
+    width: 80vw;
+    padding: 3vh 10vw;
+    background-color: var(--secondary);
+    border: 2px solid black;
+}
+
+.smallNavLinksShow a {
+    display: block;
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    margin: 2px auto;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 1%;
+    font-size: 2em;
+    width: 80%;
+}
+
 .navbarImage {
     height: 5vw;
 }
 
+.navLinkContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
 .navLinkContainer a {
     padding: 10px;
-    border: 2px solid rgb(172, 224, 104);
-    background-color: rgb(172, 224, 104);
+    border: 2px solid var(--primary);
+    background-color: var(--primary);
     color: black;
     text-decoration: none;
     border-radius: 10px;
@@ -58,21 +120,84 @@ nav {
 .navLinkContainer a:hover {
     animation-name: navLinkHoverAnim;
     animation-duration: 0.25s;
-    border: 2px solid rgb(172, 224, 104);
-    background-color: rgb(251, 255, 245);
+    border: 2px solid var(--primary);
+    background-color: var(--secondary);
+}
+
+#activeLink {
+    animation-name: none !important;
+    border: 2px solid var(--primary);
+    background-color: var(--secondary);
 }
 
 @keyframes navLinkHoverAnim {
     0% {
-        border: 2px solid rgb(172, 224, 104);
-        background-color: rgb(172, 224, 104);
+        border: 2px solid var(--primary);
+        background-color: var(--primary);
     }
 
     100% {
-        border: 2px solid rgb(172, 224, 104);
-        background-color: rgb(251, 255, 245);
+        border: 2px solid var(--primary);
+        background-color: var(--secondary);
     }
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .largeNavContainer {
+        display: none;
+    }
+    .smallNavContainer {
+        display: flex;
+    }
+    .navbarImage {
+        height: 10vh;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .largeNavContainer {
+        display: none;
+    }
+    .smallNavContainer {
+        display: flex;
+    }   
+    .navbarImage {
+        height: 10vh;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .navLinkContainer a {
+        font-size: .5em;
+    }
+    .smallNavLinksShow {
+        display: none;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .navLinkContainer a {
+        font-size: .75em;
+    }
+    .smallNavLinksShow {
+        display: none;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .navLinkContainer a {
+        font-size: 1em;
+    }
+    .smallNavLinksShow {
+        display: none;
+    }
+}
+
 
 /* Hero box */
 
@@ -98,10 +223,12 @@ nav {
 }
 
 .rightHeroFlexContainer {
+    position: relative;
     display: flex;
     justify-content: right;
     align-items: center;
     height: 60vh;
+
 }
 
 .centerHeroFlexContainer {
@@ -168,7 +295,7 @@ nav {
     animation-name: heroButtonHoverAnim;
     animation-duration: 0.3s;
     border: 2px solid transparent;
-    background-color: rgb(251, 255, 245);
+    background-color: var(--secondary);
     color: black;
 }
 
@@ -181,15 +308,100 @@ nav {
 
     100% {
         border: 2px solid transparent;
-        background-color: rgb(251, 255, 245);
+        background-color: var(--secondary);
         color: black;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .heroBox {
+        background-image: url(../images/smallHeroImage.png);
+        background-position: 40% center;
+    }
+    .rightHeroFlexContainer {
+        align-items: center;
+        padding-bottom: 3vh;
+        height: 57vh;
+    }
+    .heroText {
+        width: 80%;
+        margin: auto auto 0 auto;
+        padding: 5px 40px;
+        background-color: rgba(0, 0, 0, 0.616);
+    }
+    .heroText h1 {
+        font-size: 2.5em;
+        margin: 5px;
+    }
+    .heroText p {
+        font-size: 1em;
+        margin: 0;
+    }
+    .heroText a {
+        font-size: 1.25em;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .heroBox {
+        background-image: url(../images/smallHeroImage.png);
+        background-position: center 27%;
+    }
+    .rightHeroFlexContainer {
+        align-items: center;
+        padding-bottom: 3vh;
+        height: 57vh;
+    }
+    .heroText {
+        width: 80%;
+        margin: auto auto 0 auto;
+        padding: 5px 40px;
+        background-color: rgba(0, 0, 0, 0.616);
+    }
+    .heroText h1 {
+        font-size: 2.5em;
+        margin: 5px;
+    }
+    .heroText p {
+        font-size: 1.25em;
+        margin: 0;
+    }
+    .heroText a {
+        font-size: 1.5em;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .heroText h1 {
+        font-size: 2.5em;
+    }
+    .heroText p {
+        font-size: 1.5em;
+    }
+    .heroText a {
+        font-size: 1.5em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .heroText h1 {
+        font-size: 3em;
+    }
+    .heroText p {
+        font-size: 1.5em;
+    }
+    .heroText a {
+        font-size: 1.5em;
     }
 }
 
 /* About box */
 
 .aboutBox {
-    background-color: rgb(172, 224, 104);
+    background-color: var(--primary);
     margin-bottom: 20px;
     padding: 10px;
 }
@@ -308,7 +520,7 @@ nav {
 
 .serviceHeader {
     display: block;
-    background-color: rgb(172, 224, 104);
+    background-color: var(--primary);
     min-height: 10vw;
     border-radius: 10px;
     border: 2px solid black;
@@ -330,18 +542,18 @@ nav {
     animation-duration: 0.3s;
     position: relative;
     bottom: 10px;
-    box-shadow: 1px 5px rgba(0, 0, 0, 0.699);
+    box-shadow: 1px 10px rgba(0, 0, 0, 0.7);
 }
 
 @keyframes serviceHeaderHoverAnim {
     0% {
         bottom: 0px;
-        box-shadow: none;
+        box-shadow: 0px 0px rgba(0, 0, 0, 0.7);
     }
 
     100% {
         bottom: 10px;
-        box-shadow: 1px 5px rgba(0, 0, 0, 0.699);
+        box-shadow: 1px 10px rgba(0, 0, 0, 0.7);
     }
 }
 
@@ -380,10 +592,17 @@ nav {
     text-align: left;
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 767px) {
+    .servicesHeaderContainer {
+        display: none;
+    }
+}
+
 /* TESTIMONIALS */
 
 .testimonialsBox {
-    background-color: rgb(172, 224, 104);
+    background-color: var(--primary);
     padding: 20px;
 }
 
@@ -439,8 +658,8 @@ nav {
 .contactFormText p a {
     display: inline-block;
     padding: 10px;
-    border: 2px solid rgb(172, 224, 104);
-    background-color: rgb(172, 224, 104);
+    border: 2px solid var(--primary);
+    background-color: var(--primary);
     color: black;
     text-decoration: none;
     border-radius: 10px;
@@ -455,7 +674,7 @@ nav {
 
 @keyframes contactNowButtonHoverAnim {
     0% {
-        background-color: rgb(172, 224, 104);
+        background-color: var(--primary);
     }
 
     100% {
@@ -478,6 +697,34 @@ nav {
     font-family: 'Times New Roman', Times, serif;
 }
 
+.contactFormBox form input[type=submit] {
+    background-color: white;
+}
+
+.contactFormBox form input[type=submit]:hover {
+    animation-name: contactSubmitButtonHoverAnim;
+    animation-duration: 0.3s;
+    background-color: var(--primary);
+    position: relative;
+    bottom: 5px;
+    box-shadow: 1px 2px rgba(0, 0, 0, 0.699);
+}
+
+
+@keyframes contactSubmitButtonHoverAnim {
+    0% {
+        background-color: white;
+        box-shadow: none;
+        bottom: 0;
+    }
+
+    100% {
+        background-color: var(--primary);
+        box-shadow: 1px 2px rgba(0, 0, 0, 0.699);
+        bottom: 5px;
+    }
+}
+
 .contactFormBox form textarea {
     width: 80%;
     margin: 10px auto;
@@ -492,7 +739,7 @@ nav {
 footer {
     padding: 5px;
     margin-top: 10px;
-    background-color: rgb(172, 224, 104);
+    background-color: var(--primary);
 }
 
 .footerList {

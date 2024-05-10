@@ -10,10 +10,21 @@
 
 <body>
     <nav>
-        <a href="#"><img src="images/logo.png" alt="Tech2U Logo" class="navbarImage"></a>
-        <div class="navLinkContainer">
+        <div class="largeNavContainer">
+            <a href="#"><img src="images/logo.png" alt="Tech2U Logo" class="navbarImage"></a>
+            <div class="navLinkContainer">
+                <a href="index">Home</a>
+                <a href="about" id="activeLink">About</a>
+                <a href="services">My Services</a>
+                <a href="contact">Contact</a>
+            </div>
+        </div>
+        <div class="smallNavContainer">
+            <span onclick="toggleNavbar()"><img src="images/logo.png" alt="Tech2U Logo" class="navbarImage"></span>
+        </div>
+        <div class="smallNavLinksHide" id="smallNavLinks">
             <a href="index">Home</a>
-            <a href="about">About</a>
+            <a href="about" id="activeLink">About</a>
             <a href="services">My Services</a>
             <a href="contact">Contact</a>
         </div>
@@ -46,7 +57,7 @@
 
         <div class="whereBox">
             <div class="aboutFlexContainer container">
-                <img src="images/queenstownSkyline.jpg" alt="Malcolm standing in front of a truck">
+                <img src="images/queenstownSkyline.jpg" loading="lazy" alt="Malcolm standing in front of a truck">
                 <div class="aboutText">
                     <h3>Where am I based?</h3>
                     <p>
@@ -126,6 +137,7 @@
             <div class="copyright">&copy; Tech2U 2024, All Rights Reserved</div>
         </div>
     </footer>
+    <script src="javascript/javascript.js"></script>
 </body>
 
 </html>
