@@ -240,7 +240,7 @@ nav {
 
 .heroText {
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 40px;
+    padding: 20px;
     border-radius: 10px;
     margin: 0;
     color: white;
@@ -253,13 +253,13 @@ nav {
 
 .wideHeroText {
     width: 75%;
-    padding: 40px;
+    padding: 20px;
 }
 
 .heroBox h1 {
     text-align: center;
-    font-size: 4em;
-    margin: 20px 0 10px 0;
+    font-size: 3.5em;
+    margin: 10px 0 5px 0;
 }
 
 .aboutHeroBox h1 {
@@ -321,16 +321,16 @@ nav {
     .rightHeroFlexContainer {
         align-items: center;
         padding-bottom: 3vh;
-        height: 57vh;
+        height: 70vh;
     }
     .heroText {
-        width: 80%;
+        width: 60%;
         margin: auto auto 0 auto;
         padding: 5px 40px;
         background-color: rgba(0, 0, 0, 0.616);
     }
     .heroText h1 {
-        font-size: 2.5em;
+        font-size: 2em;
         margin: 5px;
     }
     .heroText p {
@@ -360,15 +360,15 @@ nav {
         background-color: rgba(0, 0, 0, 0.616);
     }
     .heroText h1 {
-        font-size: 2.5em;
+        font-size: 1.5em;
         margin: 5px;
     }
     .heroText p {
-        font-size: 1.25em;
+        font-size: 1em;
         margin: 0;
     }
     .heroText a {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 }
 
@@ -378,10 +378,10 @@ nav {
         font-size: 2.5em;
     }
     .heroText p {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
     .heroText a {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 }
 
@@ -406,19 +406,33 @@ nav {
     padding: 10px;
 }
 
-.aboutFlexContainer {
+.aboutLargeFlexContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.aboutFlexContainer img {
+.aboutSmallFlexContainer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutLargeFlexContainer img {
     flex: 1;
     max-height: 25vw;
     border-radius: 10px;
     margin: 5px;
     object-fit: cover;
     object-position: center;
+}
+
+.aboutSmallFlexContainer img {
+    max-height: 40vh;
+    border-radius: 10px;
+    margin: 5px;
+    object-fit: cover;
+    object-position: center 10%;
 }
 
 .aboutText {
@@ -445,7 +459,7 @@ nav {
 .aboutText p {
     text-align: center;
     font-size: 1.5em;
-    margin: 20px 0 10px 0;
+    margin: 0;
 }
 
 .aboutText a {
@@ -481,6 +495,77 @@ nav {
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .aboutLargeFlexContainer {
+        display: none;
+    }
+    .aboutSmallFlexContainer {
+        display: flex;
+    }
+    .aboutText {
+        padding: 10px;
+    }
+    .aboutText h3 {
+        font-size: 2em;
+    }
+    .aboutText p {
+        font-size: 1em;
+    }
+    .aboutText a {
+        margin-top: 20px;
+        font-size: 1.25em;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .aboutLargeFlexContainer {
+        display: none;
+    }
+    .aboutSmallFlexContainer {
+        display: flex;
+    }
+    .aboutText {
+        padding: 10px;
+    }
+    .aboutText h3 {
+        font-size: 2.5em;
+    }
+    .aboutText p {
+        font-size: 1.5em;
+    }
+    .aboutText a {
+        margin-top: 20px;
+        font-size: 1.5em;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .aboutText h3 {
+        font-size: 2em;
+    }
+    .aboutText p {
+        font-size: 1em;
+    }
+    .aboutText a {
+        font-size: 1.25em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .aboutText h3 {
+        font-size: 2.5em;
+    }
+    .aboutText p {
+        font-size: 1.25em;
+    }
+    .aboutText a {
+        font-size: 1.25em;
+    }
+}
+
 
 /* Where box (About page) */
 
@@ -508,7 +593,14 @@ nav {
 .servicesBox h2 {
     text-align: center;
     font-size: 3em;
-    margin: 20px 0 20px 0;
+    margin: 20px 0 0px 0;
+}
+
+.servicesBox hr {
+    background-color: black;
+    margin: 5px 0;
+    padding: 1px;
+    width: 100%;
 }
 
 .servicesHeaderContainer {
@@ -532,7 +624,7 @@ nav {
 
 .serviceHeader h3 {
     text-align: center;
-    font-size: 3em;
+    font-size: 2.5em;
     margin: 0 0 10px 0;
     color: black;
 }
@@ -593,9 +685,66 @@ nav {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 600px) {
     .servicesHeaderContainer {
         display: none;
+    }
+    .servicesBox h2 {
+        font-size: 2.25em;
+    }
+    .servicesTable {
+        font-size: .75em;
+    }
+    .serviceDisclaimer {
+        font-size: .5em;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .servicesHeaderContainer {
+        display: none;
+    }
+    .servicesBox h2 {
+        font-size: 2.5em;
+    }
+    .servicesTable {
+        font-size: 1.25em;
+    }
+    .serviceDisclaimer {
+        font-size: .75em;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .serviceHeader h3 {
+        font-size: 1.5em;
+    }
+    .servicesBox h2 {
+        font-size: 2.25em;
+    }
+    .servicesTable {
+        font-size: 1.5em;
+    }
+    .serviceDisclaimer {
+        font-size: .75em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .serviceHeader h3 {
+        font-size: 2em;
+    }
+    .servicesBox h2 {
+        font-size: 2.5em;
+    }
+    .servicesTable {
+        font-size: 1.75em;
+    }
+    .serviceDisclaimer {
+        font-size: .75em;
     }
 }
 
@@ -632,6 +781,57 @@ nav {
 
 .testimonialAuthor {
     font-size: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .testimonialsBox h2 {
+        font-size: 2em;
+    }
+    .testimonialText {
+        font-size: 0.75em;
+    }
+    .testimonialAuthor {
+        font-size: 0.5em;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .testimonialsBox h2 {
+        font-size: 2.5em;
+    }
+    .testimonialText {
+        font-size: 1em;
+    }
+    .testimonialAuthor {
+        font-size: 0.75em;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .testimonialsBox h2 {
+        font-size: 2.25em;
+    }
+    .testimonialText {
+        font-size: 1em;
+    }
+    .testimonialAuthor {
+        font-size: 0.75em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .testimonialsBox h2 {
+        font-size: 2.5em;
+    }
+    .testimonialText {
+        font-size: 1.25em;
+    }
+    .testimonialAuthor {
+        font-size: 0.9em;
+    }
 }
 
 /* CONTACT FORM */
@@ -692,13 +892,23 @@ nav {
     width: 80%;
     margin: 10px auto;
     font-size: 2em;
-    padding: 10px;
+    padding: 1%;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contactFormBox form textarea {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 1.75em;
+    padding: 1%;
     border-radius: 10px;
     font-family: 'Times New Roman', Times, serif;
 }
 
 .contactFormBox form input[type=submit] {
     background-color: white;
+    width: 80%;
 }
 
 .contactFormBox form input[type=submit]:hover {
@@ -725,13 +935,105 @@ nav {
     }
 }
 
-.contactFormBox form textarea {
-    width: 80%;
-    margin: 10px auto;
-    font-size: 2em;
-    padding: 10px;
-    border-radius: 10px;
-    font-family: 'Times New Roman', Times, serif;
+@media only screen and (max-width: 600px) {
+    .contactFormText p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contactFormText p a {
+        margin: 5px;
+    }
+    .contactFormText h2 {
+        font-size: 2.25em;
+    }
+    .contactFormText p {
+        font-size: 1em;
+    }
+    .contactFormBox form input {
+        width: 96%;
+        font-size: 1em;
+        margin: .5%;
+        border-radius: 5px;
+    }
+    .contactFormBox form textarea {
+        width: 96%;
+        font-size: .8em;
+        margin: .5%;
+        border-radius: 5px;
+    }
+    .contactFormBox form input[type=submit] {
+        background-color: white;
+        width: 98%;
+        font-size: .8em;
+        margin: .5%;
+        border-radius: 5px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .contactFormText p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contactFormText p a {
+        margin: 5px;
+    }
+    .contactFormText h2 {
+        font-size: 2.5em;
+    }
+    .contactFormText p {
+        font-size: 1.25em;
+    }
+    .contactFormBox form input {
+        width: 98%;
+        font-size: 1.25em;
+        margin: 3px auto;
+    }
+    .contactFormBox form textarea {
+        width: 98%;
+        font-size: 1em;
+        margin: 3px auto;
+    }
+    .contactFormBox form input[type=submit] {
+        background-color: white;
+        width: 100%;
+        margin: 3px auto;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .contactFormText h2 {
+        font-size: 2.25em;
+    }
+    .contactFormText p {
+        font-size: 1.4em;
+    }
+    .contactFormBox form input {
+        font-size: 1.5em;
+    }
+    .contactFormBox form textarea {
+        font-size: 1.25em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .contactFormText h2 {
+        font-size: 2.5em;
+    }
+    .contactFormText p {
+        font-size: 1.75em;
+    }
+    .contactFormBox form input {
+        font-size: 1.75em;
+    }
+    .contactFormBox form textarea {
+        font-size: 1.5em;
+    }
 }
 
 /* FOOTER */
@@ -739,9 +1041,22 @@ nav {
 footer {
     padding: 5px;
     margin-top: 10px;
+    padding-bottom: 5vh;
     background-color: var(--primary);
 }
 
+.footerFlexContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerNavLinks {
+    flex: 1;
+}
+
+.footerContact {
+    flex: 1;
+}
 .footerList {
     list-style-type: disc;
 }
@@ -750,18 +1065,20 @@ footer {
     margin: 0 0 5px 0;
 }
 
-.footerNavLinks {
-    width: 49%;
-}
-
-.footerNavTitle {
+.footerTitle {
     list-style-type: none;
     font-size: 2em;
     margin: 0 0 5px 0;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 1em;
+    text-align: center;
 }
 
 .footerLink {
-    font-size: 1.5em;
+    font-size: 1.75em;
     color: black;
     display: inline;
     text-decoration: none;
@@ -769,28 +1086,14 @@ footer {
     border-bottom: 2px solid transparent;
 }
 
-.footerContactInfo {
-    font-size: 1.5em;
+.footerWatermark {
     color: black;
-    display: inline;
-    text-decoration: none;
-    padding: 0px 5px;
-    border-bottom: 2px solid transparent;
 }
 
 .footerLink:hover {
     animation-name: footerHoverAnim;
     animation-duration: 0.5s;
     border-bottom: 2px solid black;
-}
-
-.footerContact {
-    width: 50%;
-}
-
-.footerFlexContainer {
-    display: flex;
-    justify-content: space-between;
 }
 
 @keyframes footerHoverAnim {
@@ -803,16 +1106,59 @@ footer {
     }
 }
 
-@media only screen and (max-width: 800px) {
-    .footerContact {
-        width: 100%;
-    }
-
-    .footerNavLinks {
-        width: 100%;
-    }
-
+@media only screen and (max-width: 600px) {
     .footerFlexContainer {
-        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .footerTitle {
+        font-size: 1.5em;
+    }
+    .footerLink {
+        font-size: 1em;
+    }
+    .copyright {
+        font-size: .75em;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .footerFlexContainer {
+        flex-direction: column;
+    }
+    .footerTitle {
+        font-size: 1.75em;
+    }
+    .footerLink {
+        font-size: 1.5em;
+    }
+    .copyright {
+        font-size: 1em;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .footerTitle {
+        font-size: 1.75em;
+    }
+    .footerLink {
+        font-size: 1.4em;
+    }
+    .copyright {
+        font-size: 1em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .footerTitle {
+        font-size: 2em;
+    }
+    .footerLink {
+        font-size: 1.75em;
+    }
+    .copyright {
+        font-size: 1em;
     }
 }
