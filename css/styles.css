@@ -254,6 +254,20 @@ nav {
 .wideHeroText {
     width: 75%;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    margin: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.wideHeroText h1 {
+    text-align: center;
+    font-size: 4em;
+    margin: 20px 0 10px 0;
 }
 
 .heroBox h1 {
@@ -263,12 +277,6 @@ nav {
 }
 
 .aboutHeroBox h1 {
-    text-align: center;
-    font-size: 4em;
-    margin: 20px 0 10px 0;
-}
-
-.serviceHeroBox h1 {
     text-align: center;
     font-size: 4em;
     margin: 20px 0 10px 0;
@@ -340,6 +348,15 @@ nav {
     .heroText a {
         font-size: 1.25em;
     }
+    .wideHeroText h1 {
+        font-size: 2.5em;
+    }
+    .contactMeHeroText {
+        padding: 30px;
+    }
+    .contactMeHeroText h1 {
+        font-size: 2.5em;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -370,6 +387,15 @@ nav {
     .heroText a {
         font-size: 1.25em;
     }
+    .wideHeroText h1 {
+        font-size: 2.75em;
+    }
+    .contactMeHeroText {
+        padding: 30px;
+    }
+    .contactMeHeroText h1 {
+        font-size: 3em;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -383,6 +409,9 @@ nav {
     .heroText a {
         font-size: 1.4em;
     }
+    .wideHeroText h1 {
+        font-size: 3em;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -395,6 +424,9 @@ nav {
     }
     .heroText a {
         font-size: 1.5em;
+    }
+    .wideHeroText h1 {
+        font-size: 3.25em;
     }
 }
 
@@ -429,6 +461,7 @@ nav {
 
 .aboutSmallFlexContainer img {
     max-height: 40vh;
+    max-width: 100%;
     border-radius: 10px;
     margin: 5px;
     object-fit: cover;
