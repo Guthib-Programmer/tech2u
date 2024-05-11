@@ -579,6 +579,33 @@ nav {
     margin: 20px 0 10px 0;
 }
 
+@media only screen and (max-width: 600px) {
+    .whereBox h3 {
+        font-size: 2em;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .whereBox h3 {
+        font-size: 2.5em;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .whereBox h3 {
+        font-size: 2em;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .whereBox h3 {
+        font-size: 2.5em;
+    }
+}
+
 /* Services box */
 
 .servicesBox {
@@ -1069,7 +1096,6 @@ footer {
     list-style-type: none;
     font-size: 2em;
     margin: 0 0 5px 0;
-    text-align: center;
 }
 
 .copyright {
@@ -1112,6 +1138,7 @@ footer {
     }
     .footerTitle {
         font-size: 1.5em;
+        text-align: center;
     }
     .footerLink {
         font-size: 1em;
@@ -1128,6 +1155,7 @@ footer {
     }
     .footerTitle {
         font-size: 1.75em;
+        text-align: center;
     }
     .footerLink {
         font-size: 1.5em;
