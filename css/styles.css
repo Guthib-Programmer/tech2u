@@ -52,13 +52,13 @@ nav {
 
 .smallNavContainer {
     display: none;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     font-size: 2em;
     border-bottom: 2px solid black;
-    padding: 1% 10%;
+    padding: 1% 5%;
     position: fixed;
-    width: 80%;
+    width: 90%;
     background-color: var(--secondary);
     border-radius: 10px;
     overflow: hidden;
@@ -96,7 +96,20 @@ nav {
 }
 
 .navbarImage {
-    height: 5vw;
+    height: 5vh;
+}
+
+.navbarIconContainer {
+    display: inline-block;
+    height: auto;
+}
+
+.navbarIcon {
+    display: inline-block;
+    /* max-height: 5vh; */
+    width: 7vw;
+    height: auto;
+    fill: #000; /* Ensure the SVG is filled with a visible color */
 }
 
 .navLinkContainer {
@@ -321,6 +334,17 @@ nav {
     }
 }
 
+@media only screen and (max-width: 380px) {
+    .heroText h1 {
+        font-size: 1.5em;
+        margin: 5px;
+    }
+    .heroText p {
+        font-size: .8rem;
+        margin: 0;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .heroBox {
         background-image: url(../images/smallHeroImage.png);
@@ -337,14 +361,6 @@ nav {
         padding: 5px 40px;
         background-color: rgba(0, 0, 0, 0.616);
     }
-    .heroText h1 {
-        font-size: 2em;
-        margin: 5px;
-    }
-    .heroText p {
-        font-size: 1em;
-        margin: 0;
-    }
     .heroText a {
         font-size: 1.25em;
     }
@@ -356,6 +372,17 @@ nav {
     }
     .contactMeHeroText h1 {
         font-size: 2.5em;
+    }
+}
+
+@media only screen and (min-width: 380px) and (max-width: 600px) {
+    .heroText h1 {
+        font-size: 1.75em;
+        margin: 5px;
+    }
+    .heroText p {
+        font-size: 1rem;
+        margin: 0;
     }
 }
 
